@@ -1,0 +1,19 @@
+@startuml
+class CreditCardFactoryAndValidator <<interface>> {
++String createCreditCard(String individualAccountIdentifier, String name, String duration)
++CvvAlgorithm setCvvAlgorithm(CvvAlgorithm cvvAlgorithm)
+}
+
+class CvvAlgorithm <<interface>> {
++CreditCard addCvv(CreditCard card)
++CreditCard checkCvv(CreditCard card)
+}
+
+class CardCompany <<enumeration>> {
+}
+class CreditCard{
+}
+
+CreditCardFactoryAndValidator ..> CvvAlgorithm: Uses
+
+@enduml
