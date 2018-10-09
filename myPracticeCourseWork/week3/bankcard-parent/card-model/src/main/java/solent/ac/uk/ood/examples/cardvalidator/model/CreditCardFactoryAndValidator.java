@@ -8,7 +8,7 @@ public interface CreditCardFactoryAndValidator {
 
     public boolean cvvIsValid(CreditCard card);
 
-    public CardOrganisation getCardOrganisation(CreditCard card);
+    public String getCardOrganisation(CreditCard card);
 
     public boolean cardNumberLunnIsValid(CreditCard card);
 

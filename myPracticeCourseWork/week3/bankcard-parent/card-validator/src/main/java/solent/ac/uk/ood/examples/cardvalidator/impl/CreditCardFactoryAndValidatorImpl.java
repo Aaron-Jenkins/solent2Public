@@ -6,7 +6,6 @@
 package solent.ac.uk.ood.examples.cardvalidator.impl;
 
 import solent.ac.uk.ood.examples.cardcheck.CalculateLunnDigit;
-import solent.ac.uk.ood.examples.cardvalidator.model.CardOrganisation;
 import solent.ac.uk.ood.examples.cardvalidator.model.CreditCard;
 import solent.ac.uk.ood.examples.cardvalidator.model.CreditCardFactoryAndValidator;
 import solent.ac.uk.ood.examples.cardvalidator.model.CvvAlgorythimStrategy;
@@ -63,9 +62,20 @@ public class CreditCardFactoryAndValidatorImpl implements CreditCardFactoryAndVa
     }
 
     @Override
-    public CardOrganisation getCardOrganisation(CreditCard card) {
+    public String getCardOrganisation(CreditCard card) {
         //TODO
-        throw new UnsupportedOperationException("Not supported yet.");
+        /*
+        VISA_BANK_OF_IRELAND_UK =
+        VISA_NAT_WEST =
+        MASTERCARD_TSB_BANK =
+        MASTERCARD_LLOYDS_BANK_PLC =
+        AMERICAN_EXPRESS_LLOYDS_BANK_PLC =
+         */
+        if (card.getIssuerIdentificationNumber().equals(424519)) {
+            return "VISA_BANK_OF_IRELAND_UK";
+        } else {
+            throw new UnsupportedOperationException("Not supported yet.");
+        }
     }
 
     @Override
