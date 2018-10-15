@@ -17,10 +17,12 @@ import solent.ac.uk.ood.examples.hotellock.model.SecretKeyProvider;
 public class HotelReceptionServiceImpl implements HotelReceptionService {
 
     private SecretKeyProvider secretKeyProvider;
+    private int issueNum = 0;
     
     @Override
     public String createCardCode(String roomNumber, Date startDate, Date endDate) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        issueNum += 1;
+        return roomNumber + startDate + endDate + issueNum;
     }
 
     @Override
