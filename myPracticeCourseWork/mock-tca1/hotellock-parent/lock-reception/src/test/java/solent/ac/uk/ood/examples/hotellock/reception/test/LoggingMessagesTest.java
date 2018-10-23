@@ -32,6 +32,7 @@ public class LoggingMessagesTest {
             LOG.error("JUST SAYING HELLO ERROR MESSAGE - the following stack trace is deliberate: ", ex);
         }
     }
+
     
     @Test
     public void testTransactionLog() {
