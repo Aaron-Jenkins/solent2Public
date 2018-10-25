@@ -1,4 +1,4 @@
-<%-- 
+cd loc<%--
     Document   : DoorLockPage.jsp
     Created on : Oct 20, 2018, 6:34:33 PM
     Author     : cgallen
